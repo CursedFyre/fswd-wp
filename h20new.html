@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<!-- Stuff to add 
+
+-->
+<head>
+    <title> AI BOTTLE? </title>
+    <style>
+
+        .hero-section {
+            background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.public-health.uiowa.edu%2Fwp-content%2Fuploads%2F2017%2F06%2FThinkstockPhotos-528718050.jpg&f=1&nofb=1&ipt=ba865f3b9e3097cbb90165afeeb15958ec05569d625df372c11348fe7407f140&ipo=images'); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            animation: slideIn 1.5s ease-in-out;
+            
+        }
+
+        .hero-content:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content {
+            font-family: Verdana;
+            position: absolute;
+            bottom: 5%;
+            left: 3%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-content a {
+            background-color: #00aaff;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .hero-content a:hover {
+            background-color: #0088cc;
+            transform:scale(1.1);
+        }
+
+        /* All used animations */
+
+        /* allu arjun meme */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* comes from side */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    
+
+        .video-container {
+            text-align: left; /*centers vid horizontally or sumn */
+        }
+
+
+
+        body {
+            font-family: Verdana;
+            margin: 0;
+            padding: 0;
+            background-color: #ECF0F1;
+            overflow-x:hidden;
+        }
+        header, section, table {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+        header {
+            background-color: #2C3E50 ;
+            color: #ECF0F1 ;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+            /* might need */
+            /* margin-right: 500px; */
+            padding: 20px;
+            border-radius: 15px;
+            animation: fadeIn 2s ease-in-out;   
+        }
+
+    
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: #34495E;
+            padding: 2px;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 10px;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+            margin-left: 80px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li:hover{
+            transform: scale(1.2);
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ECF0F1;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover{
+            color:#00aaff;
+            /* not working lol. gotta do flex 
+            transform: scale(1.5); */
+        }
+        section {
+            background-color: #BDC3C7 ;
+            border-radius: 15px;    
+            animation: fadeIn 2s ease-in-out;    
+        }
+        table {
+            border-collapse: collapse;
+            margin-right: 10px;
+            margin-left: 60px;
+            border-radius: 15px;
+            /* border: 2px solid #34495E ; sets table border color to black, dont need*/
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+        }
+        table, th, td {
+            border: 1px solid #34495E ; 
+           
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th{
+            background-color: #2C3E50;
+            color: #ECF0F1 ;
+        }
+        td{
+            background-color: #fff;
+        }
+        td:hover{
+            background-color: #ECF0F1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#Keya">Activities</a></li>
+            <!-- <li><a href="#whofor">Who is this for?</a></li> -->
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#Exp">Video</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Space above the header -->
+    <br>
+    <br>
+    <br>
+
+    <header>
+        <h1>E CLEAN SMART WATER BOTTLE</h1>
+    </header>
+    
+<!-- old pic -->
+    <!-- <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fg-ecx.images-amazon.com%2Fimages%2FG%2F01%2Faplusautomation%2Fvendorimages%2F6362ed0b-8640-47b5-8d35-30687e5de79c._CB328492465_.jpg&f=1&nofb=1&ipt=0efeda697301e2738751f652a8d8a1b109f6d9827d60c70c804d6054bbf7c3fb&ipo=images"  width="250" height="300" style="position: absolute; top: 70px; right: 70px;z-index: 0;transform: rotate(90deg)"> -->
+    
+    <section id="hc" class="hero-section">
+        <div class="hero-content">
+            <h3>The Perfect Water Bottles</h3>
+            <h1>Improve your hydration <br>one sip at a time</h1>
+            <p><i>Make drinking fun and never worry about water again</i></p>
+            <a href="#">Get Hydrated</a>
+        </div>
+    </section>
+
+    <section id="feature">
+        <h2>Key Features</h2>
+        <br>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Advanced Filtering</td>
+                <td>Top grade technology allows simple, quick and convenient water filtering capability</td>
+            </tr>
+            <tr>
+                <td>Sleek Design</td>
+                <td>Modern and stylish design to match any setting.</td>
+            </tr>
+            <tr>
+                <td> Sustainable</td>
+                <td>Our products are  made from eco friendly materials</td>
+            </tr>
+            <tr>
+                <td>Military Grade Toughness</td>
+                <td>High quality materials ensure long lasting product life</td>
+            </tr>
+            <tr>
+                <td>Non Stick</td>
+                <td>Interior is designed to contain any fluids without causing a hassle</td>
+            </tr>
+            <tr>
+                <td>Thermosteel Container</td>
+                <td>The container ensures your drink stays ice cold or piping hot all day long</td>
+            </tr>
+            <tr>
+                <td>Huge Variety</td>
+                <td>Dozens of options for your taste and needs</td>
+            </tr>
+        </table>
+    </section>
+    
+    
+
+    <section id="Keya">
+        <h2>Key Activities</h2>
+        <p>Design and product development</p>
+        <p>Materials are sourced sustainably</p>
+        <p>Integrated water filtering system</p>
+        <p>High value marketing</p>
+    </section>
+    
+    <section id="whofor">
+        <h2>Who Is This For?.....YOU</h2>
+        <p>Students, workers</p>
+        <p>Travelers, Hikers</p>
+        <p>Outdoor enthusiasts</p>
+        <p>Health concious customers</p>
+        <p>Environment dedicated activists</p>
+    </section>
+    
+    <section id="partners">
+        <h2>Our Partners</h2>
+        <p>Ecommerce builders</p>
+        <p>Customer service distributers</p>
+        <p>Retail shop partners</p>
+        <p>Water filteration technology provider</p>
+        <p>Third party resources</p>
+        <p>Sustainable materials shippers</p>
+    </section>
+    
+    <section id="Exp">
+        <h2>Watch To Know More!</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CBpzITP2MuU?si=63CoM7QzL-1m-gRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+
+    </section>
+
+    <section id="contact">
+        <h2>Order Now and Save 90%!</h2>
+        <p>Visit our site to place your order.</p>
+        <p>Website: <a href="https://www.ecleanbottles.com">www.eclean.com</a></p>
+        <p>Customer support: 7777777777</p>
+        <p>Follow us on:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/ecleanbottles">Facebook</a></li>
+            <li><a href="https://www.twitter.com/ecleanbottles">Twitter</a></li>
+            <li><a href="https://www.instagram.com/ecleanbottles">Instagram</a></li>
+        </ul>
+    
+        <p>Click here to easy return and warranty claiming:
+        <br>
+        <a href="https://www.eclean.com/returnandwarranty">www.eclean.com/return&warranty</a>
+        </p>
+    
+        <p>Access our free online manual here:<br>
+        <a href="https://www.eclean.com/manual">www.eclean.com/manual</a>
+        </p>
+    </section>
+
+
+    </body>
+    </html>
+    
